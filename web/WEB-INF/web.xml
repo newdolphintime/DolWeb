@@ -3,5 +3,42 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+        <servlet-name>demo1</servlet-name>
+        <servlet-class>ServletDemo</servlet-class>
+        <!--启动时加载-->
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>zhangwei</param-value>
+        </init-param>
+        <init-param>
+            <param-name>age</param-name>
+            <param-value>26</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo1</servlet-name>
+        <!--/+工程路径-->
+        <!--/*  代表随便访问   随便输入什么逗他来处理-->
+        <url-pattern>/demo1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>demo2</servlet-name>
+        <servlet-class>ServletDemo2</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>demo2</servlet-name>
+        <url-pattern>/demo2</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>demo3</servlet-name>
+        <servlet-class>ServletDemo3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo3</servlet-name>
+        <url-pattern>/demo3</url-pattern>
+    </servlet-mapping>
 </web-app>
