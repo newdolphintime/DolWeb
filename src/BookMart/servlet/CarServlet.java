@@ -1,3 +1,5 @@
+package BookMart.servlet;
+
 import BookMart.bean.Book;
 
 import javax.servlet.ServletException;
@@ -13,7 +15,7 @@ import java.util.List;
 /**
  * Created by Zv on 2017/05/01.
  */
-@WebServlet(name = "CarServlet",urlPatterns = "/carservlet")
+@WebServlet(name = "BookMart.servlet.CarServlet",urlPatterns = "/carservlet")
 public class CarServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
